@@ -1,9 +1,10 @@
 # atom-autocomplete-julia package
 
+Currently just barely usable.
+
 ## Components
 
-
-### Atom (the client)
+d### Atom (the client)
 
 - Manages the Julia child process
 - Communicates with the Julia child process through stdio

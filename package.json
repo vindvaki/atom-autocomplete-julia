@@ -1,7 +1,7 @@
 {
   "name": "atom-autocomplete-julia",
   "main": "./lib/atom-autocomplete-julia",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "An autocomplete+ provider for the Julia language",
   "activationCommands": {},
   "providedServices": {
