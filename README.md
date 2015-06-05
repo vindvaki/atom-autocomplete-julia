@@ -1,6 +1,6 @@
 # atom-autocomplete-julia package
 
-Currently just barely usable.
+Uses the new built-in autocomplete+ API. Currently just barely usable. 
 
 ## Components
 
