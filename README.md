@@ -5,8 +5,9 @@
 
 ### Atom (the client)
 
-- Manages the Julia subprocess
-- Communicates with the Julia subprocess via some API
+- Manages the Julia child process
+- Communicates with the Julia child process through stdio
+- Interprets the suggestion results from the Julia child process
 
 ### Julia (the server)
 
@@ -26,22 +27,9 @@ The output is a tuple of the form
 
 #### Interface
 
-The input should be a string and the cursor position, and the output will be of
-the form
+The input should be a string and the cursor position, and the output should be zero
+or more lines of the form
 
 ```
-N
-typeof(completion_1) completion_1
-typeof(completion_2) completion_2
-.
-.
-.
-typeof(completion_N) completion_N
-```
-
-where `N` is the number of completions and
-
-```
-array_of_completions = [completion_1, completion_2, ..., completion_N]
-
+typeof(completion) completion
 ```
