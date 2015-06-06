@@ -13,6 +13,10 @@ Prefix matching within the context of the current line.
 - Fuzzy matching
 - Matching based on current project
 
+## Known issues
+
+Sometimes the Julia child process starts using up 100% CPU
+
 # Implementation details
 
 You can ignore this section if you're not interested in improving this package.
