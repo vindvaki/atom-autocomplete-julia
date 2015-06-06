@@ -1,3 +1,7 @@
+## 0.0.6
+* Resolve typestrings for namespaced completions
+* Better keyword list
+
 ## 0.0.5
 * Lowered priority to get the default completions
 
