@@ -1,36 +1,54 @@
 # atom-autocomplete-julia package
 
-Uses the new built-in autocomplete+ API. Currently just barely usable. 
+Uses the new built-in autocomplete+ API.
 
-## Components
+![screenshot](atom-autocomplete-julia.png)
 
-d### Atom (the client)
+## What it does
+
+Prefix matching within the context of the current line.
+
+## What it doesn't do (yet)
+
+- Fuzzy matching
+- Matching based on current project
+
+# Implementation details
+
+You can ignore this section if you're not interested in improving this package.
+
+The package is in its early stages. Just a few lines of code really, so it's
+the perfect time to jump in and improve it.
+
+## Atom (the client)
 
 - Manages the Julia child process
 - Communicates with the Julia child process through stdio
 - Interprets the suggestion results from the Julia child process
 
-### Julia (the server)
+## Julia (the server)
 
-#### Completions algorithm
+### Completions algorithm
 
 The heavy lifting is done by
 
 ```
 Base.REPL.REPLCompletions.completions(string, pos)
 ```
-
-The output is a tuple of the form
+from Julia. The output of this function is a tuple of the form
 
 ```
 (array_of_completions, subrange_being_completed, success?)
 ```
 
-#### Interface
+### Interface
 
-The input should be a string and the cursor position, and the output should be zero
-or more lines of the form
+The input should be a string and the cursor position, and the output should be
+zero or more lines of the form
 
 ```
-typeof(completion) completion
+typeof(eval(parse(completion))) completion
 ```
+
+if `parse(eval(completion))` exists. If not, additional heuristics need to be
+applied to determine the type.
