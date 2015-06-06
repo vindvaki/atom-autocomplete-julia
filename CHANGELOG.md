@@ -1,3 +1,6 @@
+## 0.0.7
+* Changed package name to autocomplete-julia instead of atom-autocomplete-julia
+
 ## 0.0.6
 * Resolve typestrings for namespaced completions
 * Better keyword list
