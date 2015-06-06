@@ -6,12 +6,11 @@ Uses the new built-in autocomplete+ API.
 
 ## What it does
 
-Prefix matching within the context of the current line.
+Fuzzy matching within the context of the current line.
 
 ## What it doesn't do (yet)
 
-- Fuzzy matching
-- Matching based on current project
+- Matching using identifiers from the active project
 
 ## Known issues
 

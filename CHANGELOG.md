@@ -1,3 +1,7 @@
+## 0.0.4
+* Added fuzzy matching
+* Moved keyword detection to Julia
+
 ## 0.0.3
 * GitHub raw path for screenshot in readme
 

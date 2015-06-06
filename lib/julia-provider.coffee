@@ -5,6 +5,7 @@ class JuliaProvider
   selector: '.source.julia'
   inclusionPriority: 10
   excludeLowerPriority: false
+  filterSuggestions: true
 
   julia: null
 
@@ -22,30 +23,25 @@ class JuliaProvider
             [t, c] = s.split(' ')
             {
               text: c
-              leftLabel: t unless t == 'nothing'
-              type: juliaTypeIcon(c, t)
+              leftLabel: t
+              type: juliaTypeIcon(t)
             }
           resolve(suggestions)
 
   dispose: ->
     @julia.kill()
 
-isKeyword = (c) ->
-  keywords = [ 'begin', 'end', 'for', 'while', 'if', 'else', 'elseif', 'return', 'function', 'do', 'try', 'catch' ]
-  keywords.indexOf(c) != -1
-
-juliaTypeIcon = (c, t) ->
-  return 'keyword' if isKeyword(c)
-
+juliaTypeIcon = (t) ->
   typemap =
     Function: 'function'
     DataType: 'type'
     TypeConstructor: 'type'
     Module: 'import'
-    Int32: 'constant'
-    Int64: 'constant'
-    Float64: 'constant'
-    ASCIIString: 'constant'
+    macro: 'tag'
+    keyword: 'keyword'
     nothing: ''
 
-  typemap[t]
+  if typemap[t] != undefined
+    typemap[t]
+  else
+    'constant'
