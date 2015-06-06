@@ -1,3 +1,6 @@
+## 0.0.5
+* Lowered priority to get the default completions
+
 ## 0.0.4
 * Added fuzzy matching
 * Moved keyword detection to Julia
