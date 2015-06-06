@@ -2,7 +2,7 @@
 
 Uses the new built-in autocomplete+ API.
 
-![screenshot](atom-autocomplete-julia.png)
+![screenshot](https://raw.githubusercontent.com/vindvaki/atom-autocomplete-julia/master/atom-autocomplete-julia.png)
 
 ## What it does
 
