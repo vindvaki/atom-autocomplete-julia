@@ -3,7 +3,7 @@ module.exports =
 
 class JuliaProvider
   selector: '.source.julia'
-  inclusionPriority: 10
+  inclusionPriority: 0
   excludeLowerPriority: false
   filterSuggestions: true
 
