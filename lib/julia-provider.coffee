@@ -23,7 +23,7 @@ class JuliaProvider
             [t, c] = s.split(' ')
             {
               text: c
-              leftLabel: t
+              leftLabel: t unless t == 'nothing'
               type: juliaTypeIcon(t)
             }
           resolve(suggestions)
