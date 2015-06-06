@@ -1,3 +1,6 @@
+## 0.0.3
+* GitHub raw path for screenshot in readme
+
 ## 0.0.2
 * Improved the readme
 
