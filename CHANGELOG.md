@@ -1,3 +1,7 @@
+## 0.0.8
+* Removed unused UI elements (menus and views)
+* Configurable `julia` path
+
 ## 0.0.7
 * Changed package name to autocomplete-julia instead of atom-autocomplete-julia
 

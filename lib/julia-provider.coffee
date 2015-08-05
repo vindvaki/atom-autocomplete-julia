@@ -9,8 +9,8 @@ class JuliaProvider
 
   julia: null
 
-  constructor: ->
-    @julia = spawn('julia', ["#{__dirname}/completions.jl"])
+  constructor: (juliaPath)->
+    @julia = spawn(juliaPath, ["#{__dirname}/completions.jl"])
 
   getSuggestions: ({editor, bufferPosition, scopeDescriptor, prefix}) ->
     line = editor.buffer.lines[bufferPosition.row]

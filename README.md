@@ -1,4 +1,4 @@
-# atom-autocomplete-julia package
+# autocomplete-julia: Auto-Completion for Julia in Atom
 
 Uses the new built-in autocomplete+ API.
 
@@ -17,7 +17,7 @@ Uses the new built-in autocomplete+ API.
 
 I.e. parse project (or at least the current buffer) and show suggestions. This includes things like knowing that `completions` in `lib/completions.jl` (of this package) comes from the module `Base.REPL.REPLCompletions` because of the line
 
-```
+```julia
 using Base.REPL.REPLCompletions: completions, non_identifier_chars
 ```
 
@@ -50,7 +50,7 @@ See `lib/completions.jl`
 
 The heavy lifting is done by
 
-```
+```julia
 Base.REPL.REPLCompletions.completions(string, pos)
 ```
 from Julia. The output of this function is a tuple of the form
